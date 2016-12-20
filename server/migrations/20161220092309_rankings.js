@@ -4,10 +4,14 @@ exports.up = function(knex) {
     return knex.schema.createTable('rankings', (table) => {
         table.increments();
         table.integer('user_id')
+        .unsigned()
+        .notNullable()
         .references('id')
         .inTable('users')
         .onDelete('CASCADE')
         table.integer('cereal_id')
+        .unsigned()
+        .notNullable()
         .references('id')
         .inTable('cereals')
         .onDelete('CASCADE')
