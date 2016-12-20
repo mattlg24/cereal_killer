@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="cerealKiller">
+<html ng-app="cerealKillerApp">
 
 <head>
     <!-- Latest compiled and minified CSS -->
@@ -10,9 +10,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Angular -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <!-- ngRoute -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <!-- local main.js -->
     <script type="text/javascript" src="./javascripts/main.js"></script>
     <!-- controllers -->
+    <script type="text/javascript" src="./javascripts/controllers/MainController.js"></script>
     <!-- services -->
     <!-- local css -->
     <link rel="stylesheet" href="./stylesheets/style.css">
@@ -23,6 +26,8 @@
 </head>
 
 <body>
+
+    <div ng-view></div>
 
 </body>
 
