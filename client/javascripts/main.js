@@ -2,8 +2,12 @@ var app = angular.module('cerealKillerApp', ['ngRoute'])
 
 app.config(function($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider
+  .when('/search', {
+    templateUrl: '../views/search.html',
+    controller: 'MainController'
+  })
   .when('/', {
-    templateUrl: '../views/main.html',
+    templateUrl: '../views/home.html',
     controller: 'MainController'
   })
 })
