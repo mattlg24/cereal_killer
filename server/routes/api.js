@@ -8,6 +8,9 @@ router.get('/cereals/:name', function(req, res, next) {
     .join('ratings', 'cereal_id', 'cereals.id')
     .then(function(results) {
         console.log('results are ', results);
+        if (!results.length) {
+          res.send('no cereal')
+        }
 
         let overallScore = 0
         let flavor = 0
@@ -23,7 +26,6 @@ router.get('/cereals/:name', function(req, res, next) {
             milkFlavor += results[i].milkFlavor
             box += results[i].box
         }
-
         cerealObj.name = results[0].name.toLowerCase()
         cerealObj.cereal_id = results[0].cereal_id
         cerealObj.overallScore = overallScore / results.length

@@ -41,20 +41,28 @@
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
     <!-- End search form -->
-
-    <p>overall score: {{overallScore}}</p>
-    <p>flavor: {{flavor}}</p>
-    <p>texture: {{texture}}</p>
-    <p>milk flavor: {{milkFlavor}}</p>
-    <p>box: {{box}}</p>
-
     <div ng-hide="!overallScore">
-      <!-- ng hide to show buttons only when cereal is searched -->
+        <p>overall score: {{overallScore}}</p>
+        <p>flavor: {{flavor}}</p>
+        <p>texture: {{texture}}</p>
+        <p>milk flavor: {{milkFlavor}}</p>
+        <p>box: {{box}}</p>
+    </div>
+
+    <div>
         {{name}}
-          <!-- href="/#/rate/{{cereal.id}}" -->
-            <a href="#/rate"><button type="button" class="btn btn-primary">Rate this cereal</button></a>
-            <a href="#"><button type="button" class="btn btn-success">Add to Favorites</button></a>
-        </div>
+        <!-- href="/#/rate/{{cereal.id}}" -->
+        <a href="#/rate" ng-hide="!overallScore"><button type="button" class="btn btn-primary">Rate this cereal</button></a>
+        <a href="#" ng-hide="!overallScore"><button type="button" class="btn btn-success">Add to Favorites</button></a>
+    </div>
+
+    <div ng-show="addCereal">
+      <div>
+        {{cerealName}}
+      </div>
+      {{msg}}
+        <a href="#/rate"><button type="button" class="btn btn-primary">{{addCereal}}</button></a>
+    </div>
 
 </div>
 <!-- End Container Div -->
