@@ -10,4 +10,8 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     templateUrl: '../views/home.html',
     controller: 'MainController'
   })
+  .when('/rate', {
+    templateUrl: '../views/rate.html',
+    controller: 'MainController'
+  })
 })

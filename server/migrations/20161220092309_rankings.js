@@ -1,7 +1,7 @@
 'use strict'
 
 exports.up = function(knex) {
-    return knex.schema.createTable('rankings', (table) => {
+    return knex.schema.createTable('ratings', (table) => {
         table.increments();
         table.integer('user_id')
         .unsigned()
@@ -18,6 +18,7 @@ exports.up = function(knex) {
         table.integer('overallScore')
         table.integer('flavor')
         table.integer('texture')
+        table.integer('milkFlavor')
         table.integer('box')
         table.boolean('favorite')
         table.timestamps(true, true);
@@ -25,5 +26,5 @@ exports.up = function(knex) {
 }
 
 exports.down = function(knex) {
-    return knex.schema.dropTable('rankings')
+    return knex.schema.dropTable('ratings')
 }
