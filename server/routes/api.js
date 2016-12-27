@@ -61,14 +61,13 @@ router.post('/cereals', function(req, res, next) {
 
 // signup
 router.post('/signup', function(req, res, next) {
-    console.log('api.js signup')
-    console.log('req.body', req.body);
-    //check if username/email already taken
+    // console.log('api.js signup')
+    // console.log('req.body', req.body);
     knex('users')
     .where('user_name', req.body.user_name)
     .then(function(user_nameResults) {
         if (user_nameResults.length >= 1) {
-            console.log('that username is already taken');
+            console.log('that username is already taken') //make this visible to user
         } else {
             let hash = bcrypt.hashSync(req.body.password, 12)
             knex('users')
@@ -82,7 +81,7 @@ router.post('/signup', function(req, res, next) {
 // need to set cookies
                 let theUser = results[0]
                 console.log('theUser', theUser);
-                // console.log('signup results are', results);
+                console.log('inserted user results are', results);
                 res.json(results)
             })
         }
