@@ -1,4 +1,4 @@
-var app = angular.module('cerealKillerApp', ['ngRoute'])
+var app = angular.module('cerealKillerApp', ['ngRoute', 'ngCookies'])
 
 app.config(function($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider
@@ -13,5 +13,9 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
   .when('/rate', {
     templateUrl: '../views/rate.html',
     controller: 'MainController'
+  })
+  .when('/signup', {
+    templateUrl: '../views/signup.html',
+    controller: 'SignupController'
   })
 })
