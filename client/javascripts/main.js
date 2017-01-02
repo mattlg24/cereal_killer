@@ -18,4 +18,8 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     templateUrl: '../views/signup.html',
     controller: 'SignupController'
   })
+  .when('/login', {
+    templateUrl: '../views/login.html',
+    controller: 'SignupController'
+  })
 })

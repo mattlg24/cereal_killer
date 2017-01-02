@@ -16,8 +16,16 @@ app.controller('SignupController', [
         }
 
         $scope.loginForm = function(userObj) {
-          console.log('hello do i work?');
+            console.log('hello do i work?');
+            signupService.login(userObj).then(function(results) {
+                console.log('login results', results);
+            })
         }
+        
+        //logout (need cookies first)
+        // $scope.logout = function() {
+        //     $cookies.remove('loggedIn')
+        // }
 
     }
 ])
