@@ -9,7 +9,8 @@ app.controller('SignupController', [
         $scope.signupForm = function(userObj) {
             console.log('sign up was clicked');
 
-            signupService.signup(userObj).then(function(results) {
+            signupService.signup(userObj)
+            .then(function(results) {
                 console.log('hahaha signup results are', results);
                 $location.url('/search')
             })
@@ -21,7 +22,7 @@ app.controller('SignupController', [
                 console.log('login results', results);
             })
         }
-        
+
         //logout (need cookies first)
         // $scope.logout = function() {
         //     $cookies.remove('loggedIn')

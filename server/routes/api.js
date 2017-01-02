@@ -67,7 +67,7 @@ router.post('/signup', function(req, res, next) {
     .where('user_name', req.body.user_name)
     .then(function(user_nameResults) {
         if (user_nameResults.length >= 1) {
-            console.log('that username is already taken') //make this visible to user
+          console.log('that username is already taken') //make this visible to user
         } else {
             let hash = bcrypt.hashSync(req.body.password, 12)
             knex('users')
@@ -82,7 +82,8 @@ router.post('/signup', function(req, res, next) {
                 let theUser = results[0]
                 console.log('theUser', theUser);
                 console.log('inserted user results are', results);
-                res.json(results)
+                // delete theUser.hashed_pw
+                res.json(theUser)
             })
         }
     })
@@ -107,6 +108,15 @@ router.post('/login', function(req, res, next) {
       res.json(user)
     }
   })
+})
+
+router.get('/top10', function(req, res, next) {
+  console.log('i got to top 10 api.js');
+  knex('ratings')
+  .then(function(results) {
+    console.log('top cereal results are', results);
+  })
+  res.json(results)
 })
 
 module.exports = router;

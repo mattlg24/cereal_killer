@@ -19,6 +19,9 @@
                 <li><a href="#/search">Search Cereals</a></li>
                 <li><a href="#/login">Log In</a></li>
                 <li><a href="#/signup">Sign Up</a></li>
+                <!-- ng hide if cookies exist -->
+                <li ng-click="logout()"><a href="#/">Log Out</a></li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -37,8 +40,19 @@
             <div class="thumbnail">
                 <img src="..." alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
+                    <h3>Top 10</h3>
+                    <p>The 10 best rated cereals</p>
+                    <p ng-click="top10()"><a href="#/top10" class="btn btn-primary" type="button">Go!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Top Flops</h3>
+                    <p>These are the 10 worst rated cereals</p>
                     <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                 </div>
             </div>
@@ -48,19 +62,8 @@
             <div class="thumbnail">
                 <img src="..." alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
+                    <h3>Cereal of the week</h3>
+                    <p>Looking to try a new cereal? Each week a new cereal is chosen as the Cereal of the week.</p>
                     <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                 </div>
             </div>

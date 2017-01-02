@@ -22,4 +22,8 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     templateUrl: '../views/login.html',
     controller: 'SignupController'
   })
+  .when('/top10', {
+    templateUrl: '../views/top10.html',
+    controller: 'RatedController'
+  })
 })
