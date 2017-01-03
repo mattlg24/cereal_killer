@@ -2,7 +2,11 @@ app.controller('RatedController', [
     '$scope',
     'ratedService',
     '$location',
-    function($scope, ratedService, $location) {
+    '$cookies',
+    function($scope, ratedService, $location, $cookies) {
+
+        const cookie = $cookies.getObject('loggedIn')
+        // console.log('cookie.data is', cookie.data);
 
         $scope.haha = 'top 10 rated cereals go here'
 
@@ -10,10 +14,13 @@ app.controller('RatedController', [
             console.log('top 10 was clicked');
         }
 
-        ratedService.top10()
-        .then(function(results) {
+        ratedService.top10().then(function(results) {
             console.log('rated cereals results', results.data);
         })
+        
+        $scope.logout = function() {
+            $cookies.remove('loggedIn')
+        }
 
     }
 ])

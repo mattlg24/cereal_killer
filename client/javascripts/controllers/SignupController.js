@@ -3,30 +3,38 @@ app.controller('SignupController', [
     'signupService',
     '$cookies',
     '$location',
-    function($scope, signupService, $cookies, $location) {
-        $scope.hello = 'i do work'
+    '$cookies',
+    function($scope, signupService, $cookies, $location, $cookies) {
+        // $scope.hello = 'i do work'
+
+        const cookie = $cookies.getObject('loggedIn')
+        // console.log('cookie.data is', cookie.data);
 
         $scope.signupForm = function(userObj) {
             console.log('sign up was clicked');
 
-            signupService.signup(userObj)
-            .then(function(results) {
-                console.log('hahaha signup results are', results);
+            signupService.signup(userObj).then(function(results) {
+                $cookies.putObject('loggedIn', results)
+                let cookieData = $cookies.get('loggedIn')
+                console.log('cookieData from signup', cookieData);
                 $location.url('/search')
             })
         }
 
         $scope.loginForm = function(userObj) {
-            console.log('hello do i work?');
-            signupService.login(userObj).then(function(results) {
-                console.log('login results', results);
+            signupService.login(userObj)
+            .then(function(results) {
+                // console.log('login results', results.data);
+                $cookies.putObject('loggedIn', results.data)
+                let cookieData = $cookies.get('loggedIn')
+                // console.log('cookieData', cookieData)
+                $location.url('/search')
             })
         }
 
-        //logout (need cookies first)
-        // $scope.logout = function() {
-        //     $cookies.remove('loggedIn')
-        // }
+        $scope.logout = function() {
+            $cookies.remove('loggedIn')
+        }
 
     }
 ])

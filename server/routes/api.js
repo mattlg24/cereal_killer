@@ -80,9 +80,7 @@ router.post('/signup', function(req, res, next) {
             .then(function(results) {
 // need to set cookies
                 let theUser = results[0]
-                console.log('theUser', theUser);
-                console.log('inserted user results are', results);
-                // delete theUser.hashed_pw
+                delete theUser.hashed_pw
                 res.json(theUser)
             })
         }
@@ -97,14 +95,15 @@ router.post('/login', function(req, res, next) {
   .where('user_name', req.body.user_name)
   .first()
   .then((user) => {
-    console.log('hello', user);
     let passwordMatch = bcrypt.compareSync(req.body.password, user.hashed_pw)
     if (passwordMatch == false) {
       console.log('Bad username or password'); //make this visible to user
     }
     else {
       //set cookies
-      console.log('here', user);
+      // req.session.userInfo = user
+      delete user.hashed_pw
+      console.log('hello there user', user);
       res.json(user)
     }
   })
