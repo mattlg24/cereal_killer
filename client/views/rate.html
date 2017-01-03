@@ -31,14 +31,18 @@
 
 <!-- Begin Container Div -->
 <div class="container">
-    <h1>Rate your cereal</h1>
-<h1>{{cerealName}}</h1>
+    <h1>Rate {{rateCereal.name}}</h1>
+
     <form name="rateForm" ng-submit="newRating(rateCereal)">
         <div class="row col-sm-6 col-md-4 col-lg-3">
           <label>Cereal Name</label>
-          <input type="text" name="" value="Cereal Name goes here" class="form-control" ng-model="rateCereal.name">
+            <input type="text" name="name" placeholder="rateCereal.name" value="rateCereal.name" class="form-control" ng-model="rateCereal.name">
+
+            <label>Favorite</label>
+            <input type="text" name="favorite" placeholder="rateCereal.favorite" value="rateCereal.favorite" class="form-control" ng-model="rateCereal.favorite">
+
             <label>Flavor</label>
-                <select class="form-control" ng-model="rateCereal.flavor">
+            <select class="form-control" ng-model="rateCereal.flavor">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -52,7 +56,7 @@
                 </select>
 
             <label>Texture</label>
-                <select class="form-control" ng-model="rateCereal.texture">
+            <select class="form-control" ng-model="rateCereal.texture">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -66,7 +70,7 @@
                 </select>
 
             <label>Flavor of leftover Milk</label>
-                <select class="form-control" ng-model="rateCereal.milkFlavor">
+            <select class="form-control" ng-model="rateCereal.milkFlavor">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -80,13 +84,15 @@
                 </select>
 
             <label>Coolness of the Box</label>
-                <select class="form-control" ng-model="rateCereal.box">
+            <select class="form-control" ng-model="rateCereal.box">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                 </select>
-                <br>
-                <button type="submit" name="button" class="btn btn-primary">Submit Rating</button>
+
+
+            <br>
+            <button type="submit" name="button" class="btn btn-primary">Submit Rating</button>
         </div>
     </form>
 

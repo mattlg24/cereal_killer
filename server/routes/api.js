@@ -43,6 +43,7 @@ router.get('/cereals/:name', function(req, res, next) {
 // post a new rating
 router.post('/cereals', function(req, res, next) {
     console.log('req.body', req.body);
+    let overAllScore = req.body.flavor + req.body.texture + req.body.milkFlavor + req.body.box
     knex('cereals')
     .where('name', req.body.name.toLowerCase())
     .then(function(cerealResults) {
@@ -68,7 +69,9 @@ router.post('/cereals', function(req, res, next) {
         flavor: req.body.flavor,
         texture: req.body.texture,
         milkFlavor: req.body.milkFlavor,
-        box: req.body.box
+        box: req.body.box,
+        favorite: req.body.favorite,
+        overallScore: parseInt(req.body.flavor) + parseInt(req.body.texture) + parseInt(req.body.milkFlavor) + parseInt(req.body.box),
     }, '*')
     .then(function(results) {
         console.log('req.body results', results);
