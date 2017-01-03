@@ -8,6 +8,9 @@ app.service('cerealService', function($http) {
         },
         rating: function(rating) {
           return $http.post('api/cereals', rating)
+        },
+        newRating: function(newRating) {
+          return $http.post('api/')
         }
     }
 

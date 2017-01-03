@@ -15,9 +15,9 @@ app.controller('RatedController', [
         }
 
         ratedService.top10().then(function(results) {
-            console.log('rated cereals results', results.data);
+            console.log('rated cereals results', results);
         })
-        
+
         $scope.logout = function() {
             $cookies.remove('loggedIn')
         }

@@ -9,6 +9,7 @@ app.controller('MainController', [
         $scope.searchedCereal = {}
         $scope.cerealObj = {}
         $scope.rateCereal = {}
+        $scope.cerealName = $scope.cerealObj.name
 
         const cookie = $cookies.getObject('loggedIn')
         // console.log('cookie.data is', cookie.data);
@@ -32,6 +33,7 @@ app.controller('MainController', [
                     $scope.cerealObj = results.data
                     console.log('cerealObj', $scope.cerealObj);
                     console.log('cereal obj cereal id', $scope.cerealObj.cereal_id);
+                    $scope.cerealName = $scope.cerealObj.name
 
                     if (results === []) {
                         $scope.noResults = 'No results'
@@ -48,10 +50,12 @@ app.controller('MainController', [
                 console.log('msg ', $scope.msg);
 
             })
+            return $scope.cerealName
         }
 
         $scope.newRating = function(rating) {
-            cerealService.rating(rating).then(function(results) {
+            cerealService.rating(rating)
+            .then(function(results) {
                 console.log('new rating results ', results);
                 $location.url('/search')
             })
