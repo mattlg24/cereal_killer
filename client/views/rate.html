@@ -17,8 +17,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="#/">Home</a></li>
                 <li><a href="#/search">Search Cereals</a></li>
-                <li><a href="#/login">Log In</a></li>
-                <li><a href="#/signup">Sign Up</a></li>
+                <li><a href="#/login" ng-hide="{{cookie}}">Log In</a></li>
+                <li><a href="#/signup" ng-hide="{{cookie}}">Sign Up</a></li>
                 <!-- ng hide if cookies exist -->
                 <li ng-click="logout()"><a href="#/">Log Out</a></li>
             </ul>
@@ -36,58 +36,62 @@
     <form name="rateForm" ng-submit="newRating(rateCereal)">
         <div class="row col-sm-6 col-md-4 col-lg-3">
           <label>Cereal Name</label>
-            <input type="text" name="name" placeholder="rateCereal.name" value="rateCereal.name" class="form-control" ng-model="rateCereal.name">
+            <input type="hidden" name="name" placeholder="rateCereal.name" value="rateCereal.name" class="form-control" ng-model="rateCereal.name">
 
             <label>Favorite</label>
-            <input type="text" name="favorite" placeholder="rateCereal.favorite" value="rateCereal.favorite" class="form-control" ng-model="rateCereal.favorite">
+            <input type="hidden" name="favorite" placeholder="rateCereal.favorite" value="rateCereal.favorite" class="form-control" ng-model="rateCereal.favorite">
 
             <label>Flavor</label>
-            <select class="form-control" ng-model="rateCereal.flavor">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+            <select class="form-control" name="flavor" ng-model="rateCereal.flavor" ng-required="true">
+                    <option value="" disabled>Choose something</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
 
             <label>Texture</label>
-            <select class="form-control" ng-model="rateCereal.texture">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+            <select class="form-control" name="texture" ng-model="rateCereal.texture" ng-required="true">
+                    <option value="" disabled>Choose something</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
 
             <label>Flavor of leftover Milk</label>
-            <select class="form-control" ng-model="rateCereal.milkFlavor">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+            <select class="form-control" name="milkFlavor" ng-model="rateCereal.milkFlavor" ng-required="true">
+                    <option value="" disabled>Choose something</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
 
             <label>Coolness of the Box</label>
-            <select class="form-control" ng-model="rateCereal.box">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+            <select class="form-control" name="box" ng-model="rateCereal.box" ng-required="true">
+                    <option value="" disabled>Choose something</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
 
 

@@ -4,15 +4,14 @@ app.controller('MainController', [
     'cerealService',
     '$location',
     '$cookies',
-
     function($scope, $http, cerealService, $location, $cookies) {
 
         $scope.searchedCereal = {}
         $scope.cerealObj = {}
         $scope.rateCereal = {}
 
-        const cookie = $cookies.getObject('loggedIn')
-        // console.log('cookie.data is', cookie.data);
+         $scope.cookie = $cookies.getObject('loggedIn')
+        console.log('cookie is', $scope.cookie);
 
         $scope.search = function(cereal) {
             console.log('cereal is', cereal);
@@ -24,7 +23,8 @@ app.controller('MainController', [
                 // console.log('cereal ratings', results);
 
                 if (results.data === 'no cereal') {
-                    $scope.msg = 'This cereal has not yet been rated. Sign in to rate this cereal or click the button below.'
+                    $scope.msg = 'This cereal has not yet been rated. Sign in to rate this cereal.'
+                    $scope.signedInMsg = 'This cereal has not yet been rated. Click the button below to rate it.'
                     $scope.addCereal = 'Add Cereal'
                     $scope.overallScore = ''
                     $scope.flavor = ''

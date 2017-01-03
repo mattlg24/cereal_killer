@@ -49,23 +49,30 @@ router.post('/cereals', function(req, res, next) {
     .then(function(cerealResults) {
         if (cerealResults.length >= 1) {
             console.log('this cereal already exists in the database');
-            //don't need to make this visible to user as the cereal name field will be hidden and pre populated with cereal name
+
+            return knex('cereals')
+            .where('name', req.body.name.toLowerCase())
+            .then(function(cerealId) {
+              console.log('cereal Id', cerealId[0]);
+              let cId = cerealId[0].id
+              return cId
+            })
         } else {
             return knex('cereals')
             .insert({
                 name: req.body.name.toLowerCase()
-            }, '*')
+            }, 'id')
             .then(function(postResults) {
-                console.log('added cereal is', postResults);
-                return postResults
+                console.log('added cereal is', postResults[0]);
+                return postResults[0]
             })
         }
     })
-    .then(function(postResults) {
-    console.log('postResults', postResults);
+    .then(function(id) {
+    console.log('postResults', id);
     knex('ratings')
     .insert({
-        cereal_id: postResults[0].id,
+        cereal_id: id,
         flavor: req.body.flavor,
         texture: req.body.texture,
         milkFlavor: req.body.milkFlavor,
@@ -75,9 +82,9 @@ router.post('/cereals', function(req, res, next) {
     }, '*')
     .then(function(results) {
         console.log('req.body results', results);
+        res.json(results)
     })
   })
-    res.json(results)
 })
 
 // signup

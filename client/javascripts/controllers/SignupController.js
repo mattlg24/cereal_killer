@@ -7,7 +7,7 @@ app.controller('SignupController', [
     function($scope, signupService, $cookies, $location, $cookies) {
         // $scope.hello = 'i do work'
 
-        const cookie = $cookies.getObject('loggedIn')
+        $scope.cookie = $cookies.getObject('loggedIn')
         // console.log('cookie.data is', cookie.data);
 
         $scope.signupForm = function(userObj) {

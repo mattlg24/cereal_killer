@@ -5,7 +5,7 @@ app.controller('RatedController', [
     '$cookies',
     function($scope, ratedService, $location, $cookies) {
 
-        const cookie = $cookies.getObject('loggedIn')
+      $scope.cookie = $cookies.getObject('loggedIn')
         // console.log('cookie.data is', cookie.data);
 
         $scope.haha = 'top 10 rated cereals go here'
