@@ -12,7 +12,7 @@ app.controller('RatedController', [
 
         ratedService.top10()
         .then(function(results) {
-            console.log('rated cereals results', results);
+            console.log('rated cereals results', results.data);
         })
 
     }
