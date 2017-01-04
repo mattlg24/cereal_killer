@@ -26,4 +26,8 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     templateUrl: '../views/top10.html',
     controller: 'RatedController'
   })
+  .when('/bottom10', {
+    templateUrl: '../views/bottom10.html',
+    controller: 'RatedController'
+  })
 })

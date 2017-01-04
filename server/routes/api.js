@@ -5,7 +5,10 @@ let bcrypt = require('bcrypt')
 
 /* GET users listing. */
 router.get('/cereals/:name', function(req, res, next) {
-    knex('cereals').where('name', req.params.name).join('ratings', 'cereal_id', 'cereals.id').then(function(results) {
+    knex('cereals')
+    .where('name', req.params.name)
+    .join('ratings', 'cereal_id', 'cereals.id')
+    .then(function(results) {
         console.log('results are ', results);
         if (!results.length) {
             res.send('no cereal')
@@ -37,8 +40,6 @@ router.get('/cereals/:name', function(req, res, next) {
         res.json(cerealObj);
     })
 })
-
-//get one cereal to rate
 
 // post a new rating
 router.post('/cereals', function(req, res, next) {
