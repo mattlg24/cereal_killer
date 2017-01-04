@@ -20,7 +20,7 @@
                 <li><a href="#/login" ng-hide="{{cookie}}">Log In</a></li>
                 <li><a href="#/signup" ng-hide="{{cookie}}">Sign Up</a></li>
                 <!-- ng hide if {{cookie}}s exist -->
-                <li ng-click="logout()"><a href="#/">Log Out</a></li>
+                <li ng-click="logout()" ng-show="{{cookie}}"><a href="#/">Log Out</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -43,6 +43,7 @@
     </form>
     <!-- End search form -->
     <div ng-hide="!overallScore">
+      <div id="ratingChart" class="col-sm-12 col-md-12 col-lg-6"></div>
         <p>overall score: {{overallScore}}</p>
         <p>flavor: {{flavor}}</p>
         <p>texture: {{texture}}</p>

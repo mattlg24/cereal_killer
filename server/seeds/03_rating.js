@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
             .insert({
                 user_id: '1',
                 cereal_id: '1',
-                overallScore: '40',
+                overallScore: '23',
                 flavor: '8',
                 texture: '7',
                 milkFlavor: '6',
@@ -22,7 +22,7 @@ exports.seed = function(knex, Promise) {
             .insert({
                 user_id: '1',
                 cereal_id: '2',
-                overallScore: '33',
+                overallScore: '27',
                 flavor: '9',
                 texture: '7',
                 milkFlavor: '8',
@@ -33,7 +33,7 @@ exports.seed = function(knex, Promise) {
             .insert({
                 user_id: '2',
                 cereal_id: '1',
-                overallScore: '40',
+                overallScore: '26',
                 flavor: '9',
                 texture: '8',
                 milkFlavor: '8',
