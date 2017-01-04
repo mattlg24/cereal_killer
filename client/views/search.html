@@ -42,22 +42,19 @@
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
     <!-- End search form -->
-    <div ng-hide="!overallScore">
-      <div id="ratingChart" class="col-sm-12 col-md-12 col-lg-6"></div>
-        <p>overall score: {{overallScore}}</p>
-        <p>flavor: {{flavor}}</p>
-        <p>texture: {{texture}}</p>
-        <p>milk flavor: {{milkFlavor}}</p>
-        <p>box: {{box}}</p>
-    </div>
+    <br>
 
-    <div ng-hide="!overallScore">
-        {{name}}
+    <div ng-hide="!overallScore" class="rateCerealBtn">
+        <!-- {{name}} -->
         <a href="/#/rate" ng-show="{{cookie}}"><button type="button" class="btn btn-primary">Rate this cereal</button></a>
         <!-- <a href="#" ng-show="{{cookie}}"><button type="button" class="btn btn-success">Add to Favorites</button></a> -->
     </div>
+    <div ng-hide="!overallScore">
+        <div id="ratingChart" class="col-sm-12 col-md-12 col-lg-12"></div>
+    </div>
 
-<!-- fix this to disappear after searched for a cereal in db -->
+
+    <!-- fix this to disappear after searched for a cereal in db -->
     <div ng-show="addCereal">
         <div ng-show="{{cookie}}">
             {{cerealName}}

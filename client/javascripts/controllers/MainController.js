@@ -57,8 +57,8 @@ app.controller('MainController', [
                       },
                       'legend': {
                         'layout': '1x2',
-                        'x': '30%',
-                        'y': '94%'
+                        'x': '40%',
+                        'y': '92%'
                       },
                       'plotarea': {
                         'background-color': '#fff'
@@ -86,7 +86,9 @@ app.controller('MainController', [
 
                     zingchart.render({
                       id: 'ratingChart',
-                      data: myChart
+                      data: myChart,
+                      width: '100%',
+                      height: '85%',
                     });
 
                 }
