@@ -43,25 +43,17 @@
     </form>
     <!-- End search form -->
     <div ng-hide="!overallScore">
-      <div ng-hide="!overallScore" class="rateCerealBtn">
-        <!-- {{name}} -->
-        <a href="/#/rate" ng-show="{{cookie}}"><button type="button" class="btn btn-primary">Rate this cereal</button></a>
-        <!-- <a href="#" ng-show="{{cookie}}"><button type="button" class="btn btn-success">Add to Favorites</button></a> -->
-      </div>
-      <div id="ratingChart" class="col-sm-12 col-md-12 col-lg-12"></div>
-        <p>overall score: {{overallScore}}</p>
-        <p>flavor: {{flavor}}</p>
-        <p>texture: {{texture}}</p>
-        <p>milk flavor: {{milkFlavor}}</p>
-        <p>box: {{box}}</p>
+        <div ng-hide="!overallScore" class="rateCerealBtn">
+            <!-- {{name}} -->
+            <a href="/#/rate" ng-show="{{cookie}}"><button type="button" class="btn btn-primary">Rate this cereal</button></a>
+            <!-- <a href="#" ng-show="{{cookie}}"><button type="button" class="btn btn-success">Add to Favorites</button></a> -->
+        </div>
+        <div class='signInToRate' ng-hide="{{cookie}}">{{signInToRate}}</div>
+        <div id="ratingChart" class="col-sm-12 col-md-12 col-lg-12"></div>
     </div>
 
-
-<!-- fix this to disappear after searched for a cereal in db -->
+    <!-- fix this to disappear after searched for a cereal in db -->
     <div ng-show="addCereal">
-        <div ng-show="{{cookie}}">
-            {{cerealName}}
-        </div>
         <div ng-hide="{{cookie}}">{{msg}}</div>
         <div ng-show="{{cookie}}">{{signedInMsg}}</div>
         <a href="#/rate" ng-show="{{cookie}}"><button type="button" class="btn btn-primary">{{addCereal}}</button></a>

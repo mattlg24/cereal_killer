@@ -33,10 +33,10 @@ app.controller('MainController', [
                     $scope.milkFlavor = ''
                     $scope.box = ''
                 } else {
-                    $scope.cerealObj = results.data
+                    // $scope.cerealObj = results.data    //don't think i need this here
+                    $scope.signInToRate = 'Sign in to rate this cereal.'
                     console.log('cerealObj', $scope.cerealObj);
                     console.log('cereal obj cereal id', $scope.cerealObj.cereal_id);
-                    }
 
                     if (results === []) {
                         $scope.noResults = 'No results'
@@ -50,47 +50,50 @@ app.controller('MainController', [
                     $scope.box = results.data.box
                     $scope.msg = ''
 
-                    let myChart = {
-                        'type': 'bar',
-                        'plot': {
-                            'stacked': true,
-                            'stack-type': 'normal'
-                        },
-                        'legend': {
-                            'layout': '1x2',
-                            'x': '40%',
-                            'y': '92%'
-                        },
-                        'plotarea': {
-                            'background-color': '#fff'
-                        },
-                        'title': {
-                            'text': $scope.name
-                        },
-                        'scale-x': {
-                            'labels': ['Overall Score', 'Flavor', 'Texture', 'Milk Flavor', 'Box']
-                        },
-                        'scale-y': {
-                            'values': '0:35:5'
-                        },
-                        'series': [
-                            {
-                                values: [
-                                    $scope.overallScore, $scope.flavor, $scope.texture, $scope.milkFlavor, $scope.box
-                                ],
-                                'text': $scope.name + ' rating'
-                            }, {
-                                values: [
-                                    33 - $scope.overallScore,
-                                    10 - $scope.flavor,
-                                    10 - $scope.texture,
-                                    10 - $scope.milkFlavor,
-                                    3 - $scope.box
-                                ],
-                                'text': 'Total possible'
-                            }
-                        ]
-                    } //end of myChart variable
+                }
+
+                //zing chart goes here
+                let myChart = {
+                    'type': 'bar',
+                    'plot': {
+                        'stacked': true,
+                        'stack-type': 'normal'
+                    },
+                    'legend': {
+                        'layout': '1x2',
+                        'x': '40%',
+                        'y': '92%'
+                    },
+                    'plotarea': {
+                        'background-color': '#fff'
+                    },
+                    'title': {
+                        'text': $scope.name
+                    },
+                    'scale-x': {
+                        'labels': ['Overall Score', 'Flavor', 'Texture', 'Milk Flavor', 'Box']
+                    },
+                    'scale-y': {
+                        'values': '0:35:5'
+                    },
+                    'series': [
+                        {
+                            values: [
+                                $scope.overallScore, $scope.flavor, $scope.texture, $scope.milkFlavor, $scope.box
+                            ],
+                            'text': $scope.name + ' rating'
+                        }, {
+                            values: [
+                                33 - $scope.overallScore,
+                                10 - $scope.flavor,
+                                10 - $scope.texture,
+                                10 - $scope.milkFlavor,
+                                3 - $scope.box
+                            ],
+                            'text': 'Total possible'
+                        }
+                    ]
+                } //end of myChart variable
 
                     zingchart.render({id: 'ratingChart',
                     data: myChart,
