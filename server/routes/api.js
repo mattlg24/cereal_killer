@@ -144,8 +144,8 @@ router.get('/top10', function(req, res, next) {
 
         if (!allCerealsArr.length) {
             allCerealsArr.push(results[0])
-            allCerealsArr[0].allOverallScores = [results[0].overallScore]
-            allCerealsArr[0].allFlavorScores = [results[0].flavor]
+            allCerealsArr[0].allOverallScores = []
+            allCerealsArr[0].allFlavorScores = []
         }
 
         let exists = false
@@ -157,7 +157,7 @@ router.get('/top10', function(req, res, next) {
                 if (allCerealsArr[j].name === results[i].name) {
                     exists = true
                     // push scores into new array propertires
-                    allCerealsArr[results[i]].allOverallScores.push(results[i].overallScore)
+                    allCerealsArr[j].allOverallScores.push(results[i].overallScore)
 
                 }
             }
@@ -176,8 +176,9 @@ router.get('/top10', function(req, res, next) {
 
         //work on logic to sort top cereals into array
 
+        console.log('some results are', results);
+        res.json(results)
     })
-    res.json(results)
 })
 
 module.exports = router;
