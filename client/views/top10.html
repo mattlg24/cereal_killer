@@ -20,7 +20,7 @@
                 <li><a href="#/login" ng-hide="{{cookie}}">Log In</a></li>
                 <li><a href="#/signup" ng-hide="{{cookie}}">Sign Up</a></li>
                 <!-- ng hide if cookies exist -->
-                <li ng-click="logout()"><a href="#/">Log Out</a></li>
+                <li ng-click="logout()" ng-show={{cookie}}><a href="#/">Log Out</a></li>
 
             </ul>
         </div>
