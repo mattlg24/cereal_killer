@@ -18,7 +18,43 @@ exports.seed = function(knex, Promise) {
                 knex('cereals')
                 .insert({
                     name: 'fruit loops',
-                })
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'cap\'n crunch',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'raisin bran',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'reese\'s puffs',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'lucky charms',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'cocoa puffs',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'frosted flakes',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'frosted mini wheats',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'corn pops',
+                }),
+                knex('cereals')
+                .insert({
+                    name: 'alpha bits',
+                }),
             ]);
         });
 };

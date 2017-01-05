@@ -146,6 +146,9 @@ router.get('/top10', function(req, res, next) {
             allCerealsArr.push(results[0])
             allCerealsArr[0].allOverallScores = []
             allCerealsArr[0].allFlavorScores = []
+            allCerealsArr[0].allTextureScores = []
+            allCerealsArr[0].allMilkFlavorScores = []
+            allCerealsArr[0].allBoxScores = []
         }
 
         let exists = false
@@ -158,6 +161,10 @@ router.get('/top10', function(req, res, next) {
                     exists = true
                     // push scores into new array propertires
                     allCerealsArr[j].allOverallScores.push(results[i].overallScore)
+                    allCerealsArr[j].allFlavorScores.push(results[i].overallScore)
+                    allCerealsArr[j].allTextureScores.push(results[i].overallScore)
+                    allCerealsArr[j].allMilkFlavorScores.push(results[i].overallScore)
+                    allCerealsArr[j].allBoxScores.push(results[i].overallScore)
 
                 }
             }

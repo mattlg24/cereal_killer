@@ -1,6 +1,93 @@
 .rateCerealBtn {
-  text-align: right;
+    text-align: right;
 }
+
 .signInToRate {
-  text-align: right;
+    text-align: right;
+}
+
+.title {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    /*color: #2B0141;*/
+    color: #2B0151;
+}
+
+.homeTitle {
+    font-size: 72px;
+}
+
+body {
+    background: url(images/cheerios.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar {
+    /*opacity: 0.5;*/
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.navbar-brand.logo {
+    font-family: 'Rock Salt', cursive;
+    /*color: #C6CB2E;*/
+    color: #2B0151;
+}
+
+.navbar-brand.logo:hover {
+    font-family: 'Rock Salt', cursive;
+    /*color: #C6CB2E;*/
+    color: #F76015;
+}
+
+.nav.navbar-nav li a {
+    /*color: #2B0141;*/
+    color: #2B0151;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.nav.navbar-nav li a:hover {
+    color: #F76015;
+    /*color: #C6CB2E;*/
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #2B0151;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #F76015;
+}
+
+.thumbnail {
+    /*opacity: .5;*/
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.caption {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.caption h2 {
+    border-bottom: solid #DC3A69 2px;
+    color: #2B0151;
+}
+
+.caption p {
+    font-size: 19px;
+    /*color: #2B0151;*/
+}
+
+.panel.panel-default {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 23px;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.panel-body {
+    color: #2B0151;
+    text-align: center;
 }
