@@ -110,6 +110,7 @@ app.controller('MainController', [
                                 // $scope.box
                             ],
                             "backgroundColor":"#DC3A69",
+                            "alpha": 0.8,
                             'text': $scope.name + ' rating'
                         }, {
                             values: [

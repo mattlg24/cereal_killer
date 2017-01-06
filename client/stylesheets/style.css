@@ -33,7 +33,6 @@ body {
 }
 
 .navbar {
-    /*opacity: 0.5;*/
     background: rgba(255, 255, 255, 0.5)
 }
 
@@ -45,8 +44,8 @@ body {
 
 .navbar-brand.logo:hover {
     font-family: 'Rock Salt', cursive;
-    /*color: #C6CB2E;*/
-    color: #F76015;
+    /*color: #ED9C29;*/
+    color: #C6CB2E;
 }
 
 .nav.navbar-nav li a {
@@ -56,8 +55,8 @@ body {
 }
 
 .nav.navbar-nav li a:hover {
-    color: #F76015;
-    /*color: #C6CB2E;*/
+    /*color: #ED9C29;*/
+    color: #C6CB2E;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -65,7 +64,8 @@ body {
 }
 
 .navbar-default .navbar-nav>.active>a:hover {
-    color: #F76015;
+    /*color: #ED9C29;*/
+    color: #C6CB2E;
 }
 
 .thumbnail {
