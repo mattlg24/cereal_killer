@@ -26,10 +26,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Reese\'s Puffs #1'
+                'text': 'Reese\'s Puffs #1',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 29'
+                'text': 'Overall Score: 29',
+                'font-size': 15,
+                'font-color': '#2B0151'
             },
             'scale-x': {
                 'labels': [
@@ -90,10 +93,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Cheerios #2'
+                'text': 'Cheerios #2',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 27'
+                'text': 'Overall Score: 27',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -154,10 +160,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Trix #3'
+                'text': 'Trix #3',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 27'
+                'text': 'Overall Score: 27',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -217,10 +226,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Lucky Charms #4'
+                'text': 'Lucky Charms #4',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 25'
+                'text': 'Overall Score: 25',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -280,10 +292,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Cocoa Puffs #5'
+                'text': 'Cocoa Puffs #5',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 25'
+                'text': 'Overall Score: 25',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -343,10 +358,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Frosted Mini Wheats #6'
+                'text': 'Frosted Mini Wheats #6',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 25'
+                'text': 'Overall Score: 25',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -406,10 +424,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Fruit Loops #7'
+                'text': 'Fruit Loops #7',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 24'
+                'text': 'Overall Score: 24',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -469,10 +490,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Corn Pops #8'
+                'text': 'Corn Pops #8',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 24'
+                'text': 'Overall Score: 24',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -532,10 +556,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Frosted Flakes #9'
+                'text': 'Frosted Flakes #9',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 25'
+                'text': 'Overall Score: 25',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -595,10 +622,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Cap\'n Crunch #10'
+                'text': 'Cap\'n Crunch #10',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 23'
+                'text': 'Overall Score: 23',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -659,10 +689,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Grape Nuts #1'
+                'text': 'Grape Nuts #1',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 4'
+                'text': 'Overall Score: 4',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -722,10 +755,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'All Bran #2'
+                'text': 'All Bran #2',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 4'
+                'text': 'Overall Score: 4',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -785,10 +821,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Wheat Waffles #3'
+                'text': 'Wheat Waffles #3',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 4'
+                'text': 'Overall Score: 4',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -848,10 +887,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Corn Bran #4'
+                'text': 'Corn Bran #4',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 5'
+                'text': 'Overall Score: 5',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -911,10 +953,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Sugar Puffs #5'
+                'text': 'Sugar Puffs #5',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 5'
+                'text': 'Overall Score: 5',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -974,10 +1019,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Golden Oaties #6'
+                'text': 'Golden Oaties #6',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 5'
+                'text': 'Overall Score: 5',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -1037,10 +1085,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Franken Berry #7'
+                'text': 'Franken Berry #7',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 5'
+                'text': 'Overall Score: 5',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -1100,10 +1151,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Corn Flakes #8'
+                'text': 'Corn Flakes #8',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 5'
+                'text': 'Overall Score: 5',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -1163,10 +1217,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Alpha Bits #9'
+                'text': 'Alpha Bits #9',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 6'
+                'text': 'Overall Score: 6',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -1226,10 +1283,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Special K #10'
+                'text': 'Special K #10',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 8'
+                'text': 'Overall Score: 8',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
@@ -1289,10 +1349,13 @@ app.controller('RatedController', [
                 "backgroundColor": "transparent"
             },
             'title': {
-                'text': 'Corn Pops'
+                'text': 'Corn Pops',
+                'font-color': '#2B0151'
             },
             'subtitle': {
-                'text': 'Overall Score: 21'
+                'text': 'Overall Score: 21',
+                'font-size': 15,
+                'font-color': '#2B0151',
             },
             'scale-x': {
                 'labels': [
