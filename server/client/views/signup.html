@@ -1,0 +1,55 @@
+<!-- Begin Nav Section -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand logo" href="#/">CK</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/search">Search Cereals</a></li>
+                <li><a href="#login">Log In</a></li>
+                <li class="active"><a href="#/signup">Sign Up<span class="sr-only">(current)</span></a></li>
+                <li ng-click="logout()" ng-show="{{cookie}}"><a href="#/">Log Out</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- End Nav Section -->
+
+<!-- Begin Signup Form -->
+<!-- Begin Container Div -->
+<div class="container">
+    <form name="userForm" ng-submit="signupForm(user)">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" ng-model="user.name" ng-required="true">
+        </div>
+        <div class="form-group">
+            <label for="userName">Username</label>
+            <input type="text" class="form-control" id="userName" placeholder="Username" ng-model="user.user_name" ng-required="true">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="user.email" ng-required="true">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="user.password" ng-required="true"  >
+        </div>
+        <button type="submit" class="btn btn-warning">Sign Up</button>
+    </form>
+    <!-- End Signup Form -->
+</div>
+<!-- End Container Div -->

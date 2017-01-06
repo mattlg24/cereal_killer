@@ -1,0 +1,54 @@
+<!-- Begin Nav Section -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand logo" href="#/">CK</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/search">Search Cereals</a></li>
+                <li><a href="#/login" ng-hide="{{cookie}}">Log In</a></li>
+                <li><a href="#/signup" ng-hide="{{cookie}}">Sign Up</a></li>
+                <!-- ng hide if cookies exist -->
+                <li ng-click="logout()" ng-show={{cookie}}><a href="#/">Log Out</a></li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- End Nav Section -->
+
+<div class="container">
+
+    <div class="rating">
+        <h1>Top Flops</h1>
+        <h4>Why would you ever try these?</h4>
+    </div>
+
+<br>
+
+    <div id="botOne" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botTwo" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botThree" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botFour" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botFive" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botSix" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botSeven" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botEight" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botNine" class="col-sm-12 col-md-12 col-lg-6"></div>
+    <div id="botTen" class="col-sm-12 col-md-12 col-lg-6"></div>
+
+
+</div>

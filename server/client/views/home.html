@@ -1,0 +1,83 @@
+<!-- Begin Nav Section -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand logo" href="#/">CK</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="#/search">Search Cereals</a></li>
+                <li><a href="#/login" ng-hide="{{cookie}}">Log In</a></li>
+                <li><a href="#/signup" ng-hide="{{cookie}}">Sign Up</a></li>
+                <!-- ng hide if cookies exist -->
+                <li ng-click="logout()" ng-show="{{cookie}}"><a href="#/">Log Out</a></li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- End Nav Section -->
+
+<!-- Begin card section -->
+<div class="container">
+
+    <h1 class="title homeTitle">Cereal Killer</h1>
+
+    <br><br>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h2>Top 10</h2>
+                    <p>The 10 best rated cereals of all time.</p>
+                    <p><a href="#/top10" class="btn btn-warning" type="button">Go!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h2>Top Flops</h2>
+                    <p>Yuck! These are the 10 worst rated cereals.</p>
+                    <p><a href="#/bottom10" class="btn btn-warning" role="button">Go!</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h2>Cereal of the week</h2>
+                    <p>Looking to try a new cereal? Check it out here.</p>
+                    <p><a href="#/featured" class="btn btn-warning" role="button">Go!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End card section -->
+    <br><br>
+
+    <div class="panel panel-default intro col-sm-12 col-md-6 col-lg-8 col-md-offset-2">
+        <div class="panel-body">
+            <p>Have a cereal that you just love and want to share? Looking for a new cereal to try but don't know if you'll like it? You've come to the right place. Search for any cereal you like and see what others have rated it, or rate it yourself. Go
+                ahead, give it a try!</p>
+        </div>
+    </div>
+
+
+</div>
+<!-- End Container Div -->
