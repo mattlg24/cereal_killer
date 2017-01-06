@@ -2,8 +2,15 @@
     text-align: right;
 }
 
+.signedInMsg {
+    font-family: 'Rock Salt', cursive;
+    color: #2B0151;
+}
+
 .signInToRate {
     text-align: right;
+    font-family: 'Rock Salt', cursive;
+    color: #2B0151;
 }
 
 .title {
@@ -90,4 +97,19 @@ body {
 .panel-body {
     color: #2B0151;
     text-align: center;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.rating {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    color: #2B0151;
+}
+
+.form-group label {
+    font-family: 'Rock Salt', cursive;
+    color: #2B0151;
 }

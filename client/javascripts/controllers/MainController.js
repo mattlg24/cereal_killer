@@ -19,8 +19,7 @@ app.controller('MainController', [
             localStorage.setItem('cerealName', cereal)
             localStorage.setItem('favorite', 'f')
 
-            cerealService.getCereal(cereal)
-            .then(function(results) {
+            cerealService.getCereal(cereal).then(function(results) {
                 console.log('cereal ratings', results);
 
                 if (results.data === 'no cereal') {
@@ -34,7 +33,7 @@ app.controller('MainController', [
                     $scope.box = ''
                 } else {
                     // $scope.cerealObj = results.data    //don't think i need this here
-                    $scope.signInToRate = 'Sign in to rate this cereal.'
+                    $scope.signInToRate = 'Sign in to rate this cereal'
                     console.log('cerealObj', $scope.cerealObj);
                     console.log('cereal obj cereal id', $scope.cerealObj.cereal_id);
 
@@ -55,51 +54,78 @@ app.controller('MainController', [
                 //zing chart goes here
                 let myChart = {
                     'type': 'bar',
+                    "backgroundColor": "transparent",
                     'plot': {
                         'stacked': true,
                         'stack-type': 'normal'
                     },
                     'legend': {
+                        "backgroundColor": "transparent",
                         'layout': '1x2',
                         'x': '40%',
-                        'y': '92%'
+                        'y': '92%',
+                        "font-color": "#2B0151",
                     },
                     'plotarea': {
-                        'background-color': '#fff'
+                        "backgroundColor": "transparent",
                     },
                     'title': {
-                        'text': $scope.name
+                        'text': $scope.name,
+                        "width": 150,
+                        "height": 30,
+                        "offset-x": 495,
+                        "offset-y": 10,
+                        // "background-color": "#C6CB2E",
+                        "font-color": "#2B0151",
+                        "border-radius": "4px",
+                        "font-weight": "none",
+                        "bold":true,
+                        "font-size": 45,
+                    },
+                    "subtitle": {
+                        "text": "Overall Score: " + $scope.overallScore,
+                        "color": "#2B0151",
+                        "font-size": 16,
                     },
                     'scale-x': {
-                        'labels': ['Overall Score', 'Flavor', 'Texture', 'Milk Flavor', 'Box']
+                        'labels': [
+                            // 'Overall Score',
+                            'Flavor',
+                            'Texture',
+                            'Milk Flavor',
+                            // 'Box'
+                        ]
                     },
                     'scale-y': {
-                        'values': '0:35:5'
+                        'values': '0:10:1'
                     },
                     'series': [
                         {
                             values: [
-                                $scope.overallScore, $scope.flavor, $scope.texture, $scope.milkFlavor, $scope.box
+                                // $scope.overallScore,
+                                $scope.flavor,
+                                $scope.texture,
+                                $scope.milkFlavor,
+                                // $scope.box
                             ],
+                            "backgroundColor":"#DC3A69",
                             'text': $scope.name + ' rating'
                         }, {
                             values: [
-                                33 - $scope.overallScore,
+                                // 33 - $scope.overallScore,
                                 10 - $scope.flavor,
                                 10 - $scope.texture,
                                 10 - $scope.milkFlavor,
-                                3 - $scope.box
+                                // 3 - $scope.box
                             ],
+                            "backgroundColor":"#DC3A69",
+                            "alpha": 0.3,
                             'text': 'Total possible'
                         }
                     ]
                 } //end of myChart variable
 
-                    zingchart.render({id: 'ratingChart',
-                    data: myChart,
-                    width: '100%',
-                    height: '85%',
-                  });
+                zingchart.render({id: 'ratingChart', data: myChart, width: '100%', height: '85%'});
 
                 console.log('msg ', $scope.msg);
 
