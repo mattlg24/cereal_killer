@@ -19,7 +19,7 @@
         "serve-favicon": "~2.3.0"
     },
     "engines": {
-        "node": "v6.9.1"
+        "node": "6.9.1"
     }
 
 }
