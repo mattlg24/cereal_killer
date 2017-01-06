@@ -57,7 +57,8 @@ app.controller('MainController', [
                     "backgroundColor": "transparent",
                     'plot': {
                         'stacked': true,
-                        'stack-type': 'normal'
+                        'stack-type': 'normal',
+                        // 'styles':
                     },
                     'legend': {
                         "backgroundColor": "transparent",
