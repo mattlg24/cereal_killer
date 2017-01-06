@@ -4,9 +4,6 @@
     "private": true,
     "scripts": {
         "start": "node ./server/bin/www",
-        "knex": "knex",
-        "heroku-postbuild": "knex migrate:latest",
-        "nodemon": "node ./server/bin/www"
     },
     "dependencies": {
         "bcrypt": "^1.0.1",
