@@ -147,6 +147,7 @@ app.controller('MainController', [
 
         $scope.logout = function() {
             $cookies.remove('loggedIn')
+            // $location.url('/')
         }
 
     }
