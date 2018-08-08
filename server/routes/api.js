@@ -125,6 +125,7 @@ router.post('/login', function(req, res, next) {
     knex('users').where('user_name', req.body.user_name).first().then((user) => {
         let passwordMatch = bcrypt.compareSync(req.body.password, user.hashed_pw)
         if (passwordMatch == false) {
+          // if username doesn't exist in DB, get error "Cannot read property 'hashed_pw' of undefined" in nodemon because user is undefined
             console.log('Bad username or password'); //make this visible to user
         } else {
             //set cookies

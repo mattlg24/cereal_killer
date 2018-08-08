@@ -35,6 +35,6 @@ app.controller('SignupController', [
         $scope.logout = function() {
             $cookies.remove('loggedIn')
         }
-
+console.log('hello there i work');
     }
 ])
